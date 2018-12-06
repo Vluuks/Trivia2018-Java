@@ -1,4 +1,4 @@
-package com.example.gebruiker.triviaaaaaaaaah;
+package com.example.renske.trivibeeeeeeeeee;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

@@ -1,8 +1,7 @@
-package com.example.gebruiker.triviaaaaaaaaah;
+package com.example.renske.trivibeeeeeeeeee;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -11,10 +10,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity implements Response.Listener, Response.ErrorListener {
+public class MainActivity extends AppCompatActivity implements TriviaCallback, Response.Listener, Response.ErrorListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +22,29 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         setContentView(R.layout.activity_main);
 
         restTestServer();
+
+        TriviaHelper th = new TriviaHelper(getApplicationContext(), MainActivity.this);
+
+    }
+
+    @Override
+    public void onQuestionsReceived(ArrayList<Question> questionList) {
+
+    }
+
+    @Override
+    public void onErrorReceived() {
+
     }
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Log.d("Error.Response", error.getMessage());
+
     }
 
     @Override
     public void onResponse(Object response) {
-        Log.d("Error.Response", response.toString());
+
     }
 
     void restTestServer() {

@@ -1,4 +1,4 @@
-package com.example.gebruiker.triviaaaaaaaaah;
+package com.example.renske.trivibeeeeeeeeee;
 
 import java.util.ArrayList;
 
